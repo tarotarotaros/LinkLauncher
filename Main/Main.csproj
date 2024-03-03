@@ -9,11 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="UI\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\..\Data\SoldierApp\MaterialSkin\MaterialSkin.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
   </ItemGroup>
 
 </Project>
