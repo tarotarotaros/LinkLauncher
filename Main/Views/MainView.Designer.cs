@@ -37,6 +37,7 @@
             SaveButton = new MaterialSkin.Controls.MaterialRaisedButton();
             SettingButton = new MaterialSkin.Controls.MaterialRaisedButton();
             WebImagePictureBox = new PictureBox();
+            BootBrowserButton = new MaterialSkin.Controls.MaterialRaisedButton();
             ((System.ComponentModel.ISupportInitialize)WebImagePictureBox).BeginInit();
             SuspendLayout();
             // 
@@ -168,11 +169,28 @@
             WebImagePictureBox.TabIndex = 8;
             WebImagePictureBox.TabStop = false;
             // 
+            // BootBrowserButton
+            // 
+            BootBrowserButton.Depth = 0;
+            BootBrowserButton.Font = new Font("BIZ UDゴシック", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            BootBrowserButton.Icon = null;
+            BootBrowserButton.Location = new Point(475, 29);
+            BootBrowserButton.Margin = new Padding(4);
+            BootBrowserButton.MouseState = MaterialSkin.MouseState.HOVER;
+            BootBrowserButton.Name = "BootBrowserButton";
+            BootBrowserButton.Primary = true;
+            BootBrowserButton.Size = new Size(130, 30);
+            BootBrowserButton.TabIndex = 9;
+            BootBrowserButton.Text = "ブラウザ起動";
+            BootBrowserButton.UseVisualStyleBackColor = true;
+            BootBrowserButton.Click += OnBootBrowserButtonClciked;
+            // 
             // MainView
             // 
             AutoScaleDimensions = new SizeF(8F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(756, 395);
+            Controls.Add(BootBrowserButton);
             Controls.Add(WebImagePictureBox);
             Controls.Add(SettingButton);
             Controls.Add(SaveButton);
@@ -202,5 +220,6 @@
         private MaterialSkin.Controls.MaterialRaisedButton SaveButton;
         private MaterialSkin.Controls.MaterialRaisedButton SettingButton;
         private PictureBox WebImagePictureBox;
+        private MaterialSkin.Controls.MaterialRaisedButton BootBrowserButton;
     }
 }
