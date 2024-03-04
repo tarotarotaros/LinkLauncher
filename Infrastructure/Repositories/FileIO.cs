@@ -8,7 +8,9 @@ namespace Infrastructure.Repositories
 
         public FileIO()
         {
-            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance); // memo: Shift-JISを扱うためのおまじない
+            // https://mogmo811.hatenablog.com/entry/2020/12/21/181537
+            // memo: Shift-JISを扱うためのおまじない
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance); 
         }
 
         public bool WriteFile(string saveText, string fileName)
