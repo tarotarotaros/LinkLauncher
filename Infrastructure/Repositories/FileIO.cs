@@ -6,6 +6,11 @@ namespace Infrastructure.Repositories
     {
         private const string SHIFT_JIS_CODE = "Shift_JIS";
 
+        public FileIO()
+        {
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance); // memo: Shift-JISを扱うためのおまじない
+        }
+
         public bool WriteFile(string saveText, string fileName)
         {
             try

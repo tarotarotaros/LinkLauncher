@@ -3,7 +3,7 @@ using Domain.Repositories;
 
 namespace Infrastructure.Repositories
 {
-    internal class ApplicationSettingRepository : IApplicationSettingRepository
+    public class ApplicationSettingRepository : IApplicationSettingRepository
     {
         private const string SETTING_FILE_NAME = "setting.json";
         private readonly JsonSettingConverter _jsonSettingConverter;

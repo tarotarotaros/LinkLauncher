@@ -1,6 +1,7 @@
 ﻿using Domain.Models;
 using Infrastructure;
 using Infrastructure.Repositories;
+using Main.Views;
 
 namespace Main.Presenters
 {
@@ -41,7 +42,15 @@ namespace Main.Presenters
 
         private void OnSettingButtonClicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            var settingView = new SettingView();
+            var settingPresenter = new SettingPresenter(settingView, new ApplicationSettingRepository());
+
+            using (settingView)
+            {
+                settingView.ShowDialog();
+            }
+
+            //throw new NotImplementedException();
         }
 
         public void OnSaveButtonClicked(object sender, EventArgs e)
