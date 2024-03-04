@@ -1,5 +1,6 @@
-﻿using Infrastructure;
-using Models;
+﻿using Domain.Models;
+using Infrastructure;
+using Infrastructure.Repositories;
 
 namespace Main.Presenters
 {

@@ -1,9 +1,9 @@
-﻿using Models;
+﻿using Domain.Models;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Diagnostics;
 
-namespace Infrastructure
+namespace Infrastructure.Repositories
 {
     public class BrowserRepository
     {
@@ -13,7 +13,7 @@ namespace Infrastructure
 
         public BrowserRepository()
         {
-            
+
         }
 
 
@@ -39,11 +39,11 @@ namespace Infrastructure
                 url = driver.Url;
 
                 ////スクショとして保存してみる
-                if (File.Exists(TEMP_SAVED_PATH)) 
+                if (File.Exists(TEMP_SAVED_PATH))
                 {
                     File.Delete(TEMP_SAVED_PATH);
                 }
-                
+
                 Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
                 screenshot.SaveAsFile(TEMP_SAVED_PATH); // Format values are Bmp, Gif, Jpeg, Png, Tiff
 

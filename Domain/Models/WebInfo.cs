@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Models
+namespace Domain.Models
 {
     public class WebInfo
     {
@@ -22,7 +22,7 @@ namespace Models
             _url = url;
             _description = description;
             _imagePath = imagePath;
-                
+
         }
 
         public WebInfo(string title, string url, string imagePath)
